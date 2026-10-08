@@ -1,180 +1,214 @@
+<!-- CV-fahamida-main/index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Fahamida Akther - CV</title>
-    <style>
-        body{
-            margin:0;
-            font-family: Arial, sans-serif;
-            background:#e5e5e5;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fahamida Akther - CV</title>
+<style>
+  @page { size: A4; margin: 12mm; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #e5e5e5;
+    font-family: "Times New Roman", Times, serif;
+    color: #000;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 20px auto;
+    padding: 12mm 14mm;
+    background: #fff;
+    box-shadow: 0 0 12px rgba(0,0,0,.2);
+  }
+  a { color: #000; text-decoration: none; }
+  a:hover { text-decoration: underline; }
 
-        .container{
-            width:900px;
-            margin:30px auto;
-            display:flex;
-            background:white;
-            box-shadow:0 0 15px rgba(0,0,0,0.2);
-        }
+  /* ===== Header (Sifat style) ===== */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    padding-bottom: 8px;
+    border-bottom: 6px solid #d9d9d9;   /* ধূসর বার */
+  }
+  .photo {
+    width: 125px;
+    height: 150px;
+    border: 1px solid #333;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .info { flex: 1; text-align: right; }
+  .info h1 {
+    margin: 4px 0 0;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+  .info .title { font-size: 18px; font-weight: bold; margin-bottom: 4px; }
+  .info div { font-size: 14.5px; line-height: 1.5; }
+  .info a { color: #1155cc; text-decoration: underline; }
 
-        /* LEFT SIDE */
-        .left{
-            width:35%;
-            background:#1f3b57;
-            color:white;
-            padding:30px;
-        }
+  /* ===== Section headings (Rakibul style) ===== */
+  h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    border-bottom: 1.5px solid #000;
+    margin: 12px 0 6px;
+    padding-bottom: 1px;
+    letter-spacing: .5px;
+  }
 
-        .left img{
-            width:150px;
-            height:150px;
-            border-radius:50%;
-            display:block;
-            margin:0 auto 20px;
-            border:4px solid white;
-        }
+  p { margin: 3px 0; text-align: justify; }
+  .skills p { margin: 2px 0; }
 
-        .left h3{
-            border-bottom:1px solid white;
-            padding-bottom:5px;
-            margin-top:20px;
-        }
+  /* Projects */
+  .project { margin-bottom: 8px; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .row .name { font-weight: bold; font-size: 14.5px; }
+  .row .links { font-size: 13px; white-space: nowrap; }
+  .row .links a { text-decoration: underline; }
+  .row .date { font-size: 13px; white-space: nowrap; }
+  ul { margin: 3px 0 0; padding-left: 18px; }
+  li { margin: 2px 0; text-align: justify; }
+  li a { text-decoration: underline; }
 
-        .left ul{
-            list-style:none;
-            padding:0;
-            font-size:14px;
-        }
+  /* Education */
+  .edu { margin-bottom: 4px; }
+  .edu .sub { font-style: italic; }
 
-        .left ul li{
-            margin:8px 0;
-        }
-
-        /* RIGHT SIDE */
-        .right{
-            width:65%;
-            padding:40px;
-        }
-
-        .right h1{
-            margin:0;
-            color:#1f3b57;
-        }
-
-        .right h2{
-            color:#1f3b57;
-            margin-top:30px;
-            border-bottom:2px solid #ddd;
-            padding-bottom:5px;
-        }
-
-        .right p{
-            font-size:14px;
-            line-height:1.6;
-        }
-
-        .skill-bar{
-            background:#ddd;
-            height:8px;
-            margin:5px 0 15px;
-        }
-
-        .skill-fill{
-            background:#1f3b57;
-            height:8px;
-        }
-    </style>
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; box-shadow: none; width: auto; min-height: auto; padding: 0; }
+    .header, h2 { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
 </head>
-
 <body>
+<div class="page">
 
-<div class="container">
-
-    <!-- LEFT SIDE -->
-    <div class="left">
-
-        <img src="image/cv.jpeg" alt="Profile Picture">
-
-        <h3>Contact Info</h3>
-        <ul>
-            <li>📞 01918209681</li>
-            <li>📧 ashafahmida@gmail.com</li>
-            <li>📍 Bangladesh</li>
-        </ul>
-
-        <h3>Education</h3>
-        <ul>
-            <li>JSC (2017) - GPA 5.00</li>
-            <li>SSC (2020) - GPA 5.00</li>
-            <li>HSC (2022) - GPA 5.00</li>
-            <li>BSc in Software Engineering (Running)<br>SUST</li>
-        </ul>
-
-        <h3>Skills</h3>
-        <ul>
-            <li>HTML & CSS</li>
-            <li>Java</li>
-            <li>C++</li>
-            <li>DBMS</li>
-            <li>Problem Solving</li>
-        </ul>
-
-        <h3>Languages</h3>
-        <ul>
-            <li>Bangla</li>
-            <li>English</li>
-        </ul>
-
+  <!-- [১] HEADER (Sifat-এর মতো): ছবি বাঁয়ে, তথ্য ডানে -->
+  <div class="header">
+    <img class="photo" src="image/cv.jpeg" alt="Profile Picture">
+    <div class="info">
+      <h1>Fahamida Akther</h1>
+      <div class="title">Full-Stack Developer</div>
+      <div>E-mail: <a href="mailto:ashafahmida97@gmail.com">ashafahmida97@gmail.com</a></div>
+      <div>Address:Sylhet, Bangladesh</div>
+      <div><Phone:>Phone:+88 01918209681</Phone:></div>
+      <div>Linkedin: <a href="https://www.linkedin.com/in/fahamida-asha-583315380/">Fahamida Akther</a></div>
+      <div>Github: <a href="https://github.com/Fahamida-Asha024">Fahamida-Asha024</a></div>
+      <div>Portfolio: <a href="https://portfolio-asha-4hqovjin0-fahamida-asha024s-projects.vercel.app">Fahamida Akther</a></div>
     </div>
+  </div>
 
+  <!-- [২] CAREER OBJECTIVE -->
+  <h2>Career Objective</h2>
+  <p>
+    Motivated Software Engineering student and full-stack developer experienced in
+    building role-based web applications with React, Node.js, Express and MySQL.
+    Strong in problem solving and object-oriented programming, seeking an opportunity
+    to learn, grow and contribute to reliable, user-friendly software products.
+  </p>
 
-    <!-- RIGHT SIDE -->
-    <div class="right">
+  <!-- [৩] TECHNICAL SKILLS -->
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <p><b>Languages:</b> Java(OOP)JavaScript (ES6),C, C++,Python</p>
+    <p><b>Frontend:</b> HTML, CSS, React.js, Vite, React Router</p>
+    <p><b>Backend:</b> Node.js, Express.js, REST APIs, JWT Authentication,Responsive& Mobile-First UI</p>
+    <p><b>Database:</b> MySQL, MongoDB</p>
+    <p><b>Version Control &amp; Tools:</b> Git, GitHub, VS Code,Figma,Postman</p>
+    <p><b>Core CS:</b> Object-Oriented Programming,Data Structure & Algorithm(C++) Problem Solving</p>
+  </div>
 
-        <h1>Fahamida Akther</h1>
-        <p><strong>Software Engineering Student</strong></p>
+  <!-- [৪] PROJECTS -->
+  <h2>Projects</h2>
 
-        <h2>Profile</h2>
-        <p>
-            Motivated and hardworking Software Engineering student seeking
-            opportunities to develop technical skills and contribute to
-            innovative software solutions.
-        </p>
-
-        <h2>Projects</h2>
-        <p><strong>Snake Game (Sdl)</strong></p>
-        <p><strong>Pong Game (Java)</strong></p>
-        <p><strong>Brick Breaker Game (Java)</strong></p>
-        <p>Developed a complete Java game using OOP principles.</p>
-
-        <p><strong>Online Complaint & Resolution Portal (SRS Project)</strong></p>
-        <p>Designed full Software Requirements Specification with diagrams.</p>
-
-        <h2>Professional Skills</h2>
-
-        HTML
-        <div class="skill-bar">
-            <div class="skill-fill" style="width:80%;"></div>
-        </div>
-
-        CSS
-        <div class="skill-bar">
-            <div class="skill-fill" style="width:75%;"></div>
-        </div>
-
-        Java
-        <div class="skill-bar">
-            <div class="skill-fill" style="width:70%;"></div>
-        </div>
-
-        C++
-        <div class="skill-bar">
-            <div class="skill-fill" style="width:65%;"></div>
-        </div>
-
+  <div class="project">
+    <div class="row">
+      <span class="name">Pet Adoption Management System </span>
+      <span class="links">
+        <a href="TODO-PET-LIVE-LINK">Live Site</a> |
+        <a href="https://github.com/Fahamida-Asha024/Pet-Addoption-byMySQL.git">GitHub Repo</a>
+      </span>
     </div>
+    <ul>
+      <li>Developed a full-stack platform to manage pets, adopters, adoptions and vaccination records using React (Vite), Node.js, Express.js and MySQL.</li>
+      <li>Designed a MySQL schema with four tables (Pets, Adopters, Adoptions, Vaccinations) and built REST API endpoints in Express.js.</li>
+      <li>Implemented JWT-based authentication with login/register and three user roles (Admin/Manager, Staff, Adopter), plus role-based route protection with React Router v6.</li>
+      <li>Built the adoption workflow: an adopter's request is saved as pending and the admin is notified instantly; the admin approves it (pending → adopted) and assigns a staff member for delivery.</li>
+      <li>Created separate Admin and Staff dashboards, support for multiple staff accounts, and a per-resource API layer configured through the VITE_API_URL environment variable.</li>
+    </ul>
+  </div>
 
+  <div class="project">
+    <div class="row">
+      <span class="name">Hall Complaint Management System (SmartHall) – Team Project</span>
+      <span class="links">
+        <a href="https://github.com/Fahamida-Asha024/SmartHall">GitHub Repo</a>
+      </span>
+    </div>
+    <ul>
+      <li>Building a web system for students and admins to submit, track and resolve hall complaints, based on a complete Software Requirements Specification (SRS) with diagrams.</li>
+      <li>Developing the React frontend and the Node.js, Express.js and MySQL backend, collaborating with a teammate on GitHub using feature branches (e.g. login/register).</li>
+    </ul>
+  </div>
+  <div class="project">
+  <div class="row">
+    <span class="name">KriShop – Full-Stack E-Commerce Web Application</span>
+    <span class="links">
+      <a href="https://github.com/Fahamida-Asha024/KriShop">GitHub Repo</a>
+    </span>
+  </div>
+  <ul>
+    <li>Developed a full-stack e-commerce web application using Next.js, MongoDB, and NextAuth, implementing product browsing, user authentication, shopping cart, and order management functionality.</li>
+    <li>Integrated Google OAuth for secure user authentication and Stripe for payment processing, delivering a complete online shopping workflow from product discovery to checkout.</li>
+  </ul>
 </div>
 
+
+  <div class="project">
+    <div class="row">
+      <span class="name">Game Projects – Snake (C++, SDL), Pong &amp; Brick Breaker (Java)</span>
+    </div>
+    <ul>
+      <li>Developed complete games applying object-oriented programming principles:
+        Snake <a href="TODO-SNAKE-REPO">[Code]</a> <a href="TODO-SNAKE-DEMO">[Demo]</a>,
+        Pong <a href="TODO-PONG-REPO">[Code]</a> <a href="TODO-PONG-DEMO">[Demo]</a>,
+        Brick Breaker <a href="TODO-BRICK-REPO">[Code]</a> <a href="TODO-BRICK-DEMO">[Demo]</a>.
+      </li>
+    </ul>
+  </div>
+
+  <!-- [৫] EDUCATION -->
+  <h2>Education</h2>
+  <div class="edu">
+    <div class="row"><b>Bachelor of Science (B.Sc.) in Software Engineering</b><span class="date">Running(2.92-til 3rd year 1st semester)</span></div>
+    <div class="sub">Shahjalal University of Science and Technology (SUST)</div>
+  </div>
+  <div class="edu">
+    <div class="row"><b>Higher Secondary Certificate (HSC)</b><span class="date">2022 | GPA: 5.00</span></div>
+    <div class="sub">Govt.Begum Rokeya College(Rangpur)</div>
+  </div>
+  <div class="edu">
+    <div class="row"><b>Secondary School Certificate (SSC)</b><span class="date">2020 | GPA: 5.00</span></div>
+    <div class="sub">Barovita School and College</div>
+  </div>
+  <div class="edu">
+    <div class="row"><b>Junior School Certificate (JSC)</b><span class="date">2017 | GPA: 5.00</span></div>
+    <div class="sub">Barovita School and College</div>
+  </div>
+
+  <!-- [৬] LANGUAGES -->
+  <h2>Languages</h2>
+  <p>Bangla (Native) | English (Professional Working Proficiency) | Hindi (Basic)</p>
+
+</div>
 </body>
 </html>
